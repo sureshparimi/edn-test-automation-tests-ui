@@ -1,0 +1,50 @@
+name: Pytest-bdd-tests-ui-suite
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: tests-ui
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.8.5]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: testing edison dashboard tests using pytest-bdd
+      env:
+        Pfizer_NT_ID: ${{ secrets.PFIZER_NT_USERNAME }}
+        pfizer_NT_Password: ${{ secrets.PFIZER_NT_PASSWORD }}
+        SSO_URL: ${{ secrets.SSO_URL }}
+      run: |
+        pytest -v --testdocx --reruns 0 --reruns-delay 1 --gherkin-terminal-reporter-expanded --html=report.html --self-contained-html  --driver Chrome --driver-path selenium_drivers/chromedriver --capability headless True --variables webdriver/capabilities_web.json --variables i18n.json --variables variables.json --tags="" --base-url https://smartsite-integration.pfizersite.io/
+    - name: Upload pytest test results
+      uses: actions/upload-artifact@v2
+      with:
+          name: pytest-results-${{ matrix.python-version }}
+          path: tests-ui/report.html
+        # Use always() to always run this step to publish test results when there are test failures
+      if: ${{ always() }} 

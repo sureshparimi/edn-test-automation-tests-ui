@@ -40,7 +40,7 @@ jobs:
         pfizer_NT_Password: ${{ secrets.PFIZER_NT_PASSWORD }}
         SSO_URL: ${{ secrets.SSO_URL }}
       run: |
-        pytest -v --testdocx --reruns 0 --reruns-delay 1 --gherkin-terminal-reporter-expanded --html=report.html --self-contained-html  --driver Chrome --driver-path selenium_drivers/chromedriver --capability headless True --variables webdriver/capabilities_web.json --variables i18n.json --variables variables.json --tags="" --base-url https://smartsite-integration.pfizersite.io/
+        pytest -v --reruns 0 --reruns-delay 1 --gherkin-terminal-reporter-expanded --html=report.html --self-contained-html  --driver Chrome --driver-path selenium_drivers/chromedriver --capability headless True --variables webdriver/capabilities_web.json --variables i18n.json --variables variables.json --tags="" --base-url https://smartsite-integration.pfizersite.io/
     - name: Upload pytest test results
       uses: actions/upload-artifact@v2
       with:

@@ -29,3 +29,4 @@ selenium==3.141.0
 Pillow==8.0.1
 SSIM-PIL==1.0.10
 webdrivermanager==0.9.0
+pytest-testdox

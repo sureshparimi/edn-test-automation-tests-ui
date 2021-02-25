@@ -1,0 +1,12 @@
+{
+    "capabilities": {
+        "os": "Windows",
+        "os_version": "10",
+        "resolution": "1920x1080",
+        "browserstack.debug": false,
+        "browserstack.local": "false",
+        "browserstack.timezone": "UTC",
+        "realMobile": true,
+        "deviceOrientation": "landscape"
+    }
+}

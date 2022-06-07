@@ -7,7 +7,7 @@ Version 2.1 - Python Test Automation Boilerplate
 
 Description
 ===========
-Version 2.1 is the supported version of the Python Test Automation Boilerplate.
+Python Test Automation 
 
 It contains contains specific third party features to enable you to create tests within your local projects. See Features below, for full details.
 
@@ -16,15 +16,7 @@ Installation
 
 Installing for the First Time
 -----------------------------
-
-- To clone v2.1 of this boilerplate, see `DSE Test Guild Knowledge Base`_.
-
-- To customize installation using an advanced process, see `for UI testing`_ and `for API testing`_
-
-Upgrading From Version 2.0 to 2.1
----------------------------------
-
-See `Upgrading your version of the boilerplate`_
+- You can customize installation using an advanced process, for both `for UI testing`_ and `for API testing`_
 
 
 Features
@@ -57,29 +49,8 @@ Features
 
 _NOTE:_ Please read inner README.md files for more technical details.
 
-Contributing
-============
-
-If you want to contribute to this project, see Contributing_
-
-Resources
-=========
-
-- `ChangeLog`_
-- `Issue Tracker`_
-- `GitHub Code`_
 
 .. [#f1] Git for Windows provides a BASH emulation used to run Git from the command line. .NIX users should feel right at home, as the BASH emulation behaves just like the "git" command in LINUX and UNIX environments.
-
-.. _Digital Solutions & Enablement: https://teams.microsoft.com/l/team/19%3a983bec845cee4b08a1023f7b8ece093e%40thread.skype/conversations?groupId=5f70f02d-fc1d-41d0-ab99-2043005d8107&tenantId=7a916015-20ae-4ad1-9170-eefd915e9272
-.. _DSEQualityTest: https://pfizer.sharepoint.com/sites/DSEQualityTest
-.. _for UI testing: https://github.com/pfizer/python-test-automation-boilerplate/blob/release/2.1/tests
-.. _for API testing: https://github.com/pfizer/python-test-automation-boilerplate/blob/release/2.1/tests-api
-.. _DSE Test Guild Knowledge Base: https://pfizer.sharepoint.com/sites/DSEQualityTest/SitePages/Test-Guild-Knowledge-Base.aspx
-.. _Upgrading your version of the boilerplate: https://pfizer.sharepoint.com/sites/DSE-TestGuild/SitePages/Upgrading-your-version-of-the-boilerplate.aspx
-
-.. _v2.0: https://github.com/pfizer/python-test-automation-boilerplate/tree/release/2.0
-.. _v2.1: https://github.com/pfizer/python-test-automation-boilerplate/tree/release/2.1
 
 .. _pytest: http://pytest.org
 .. _installation_scripts.zip: https://github.com/pfizer/python-test-automation-boilerplate/blob/release/2.1/installation_scripts.zip
@@ -98,13 +69,3 @@ Resources
 .. _pytest-testrail-client: https://pypi.org/project/pytest-testrail-client/
 .. _requests: https://requests.readthedocs.io/en/master/
 
-.. _Contributing: https://github.com/pfizer/python-test-automation-boilerplate/blob/master/docs/CONTRIBUTING.rst
-.. _BrowserStack: https://browserstack.com
-
-.. _ChangeLog:  https://github.com/pfizer/python-test-automation-boilerplate/blob/master/docs/CHANGELOG.rst
-.. _Issue Tracker: https://github.com/pfizer/python-test-automation-boilerplate/issues
-.. _GitHub Code: https://github.com/pfizer/python-test-automation-boilerplate/tree/release/2.1
-
-----
-
-Ruby Test Edit
